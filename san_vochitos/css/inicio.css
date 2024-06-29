@@ -1,0 +1,275 @@
+
+#calesita {
+  position: relative;
+}
+
+.carousel slide carousel-fade{
+  margin: 100px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0;
+  position: relative;
+} 
+
+.carrousel-inner{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+} 
+
+.carousel-control-prev{
+  left: 0;
+}
+
+.carousel-control-next{
+  right: 0;
+} 
+
+/*CARROUSEL*/
+.combo{
+  margin-top:0px;
+  width: 100vw;
+  height: 60vw;
+}
+
+/* NUESTRA (A)MIGA */
+.nuestraAmiga{
+  margin-top: 2rem;
+  margin-bottom: 0;
+  
+  background-color: #ffffff;
+  display: flex; 
+  flex-direction: column; 
+  width: 100%;
+  height: 50%;
+  text-align: left;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+/* .saboresIncreibles{
+  height: 15vw;
+  width: 30vw; 
+  align-self: flex-end;
+  margin-bottom: 5vw;
+} */
+
+.sabores{
+  margin-top: 1vw;
+  margin-bottom: 10vw;
+  color: #b6e2a1;
+  font-family: "Yesteryear", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7vw;
+
+  align-self: flex-end;
+  rotate: -20deg;
+}
+
+
+
+/* ACOMPAÑAMIENTO */
+ .novedadesImagenes{
+  background-color: #FEBE8C;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  width: 100%;
+  height: 1%;
+
+  position: relative;
+}
+
+.textoAcompanamiento {
+  text-align: left;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+/* VARIABLES CSS */
+:root {
+  /*========== Colores ==========*/
+  --first-color: #000;
+  --title-color:#F7A4A4;
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color:#fff;
+
+  /*========== tipo de letra y tamaño ==========*/
+  --body-font:  poetsen system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+}
+
+/*========== Responsive ==========*/
+@media screen and (min-width: 960px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: .875rem;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== tarjeta ===============*/
+.container {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5vw;
+  padding-block: 5vw;
+  margin-bottom: 5vw;
+}
+
+.card__container {
+  display: grid;
+  row-gap: 0vw;
+}
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__data {
+  background-color: var(--container-color);
+  padding: 1.5vw 2vw;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1vw;
+  position: absolute;
+  bottom: 2vw;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+.card__description {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: .25vw;
+}
+
+.card__title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: .75vw;
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--first-color);
+}
+
+.card__button:hover {
+  text-decoration: none;
+  color: #F7A4A4;
+}
+
+/* aplicando hover a las tarjetas */
+.card__article:hover .card__data {
+  animation: show-data 0.5s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 0.5s forwards;
+}
+
+/* tarjeta animacion */
+@keyframes show-data {
+  0% {
+    transform: translateY(40vw);
+  }
+
+  100% {
+    transform: translateY(0vw);
+  }
+}
+
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(0vw);
+  }
+  100% {
+    transform: translateY(40vw);
+  }
+}
+
+/* UNA PASIÓN */
+.unaPasion{
+  background-color: #ffffff;
+  display: flex; 
+  flex-direction: column; 
+  width: 100%;
+  height: 50%;
+  margin-top: 2rem;
+  margin-bottom: 20vw;
+  text-align: left;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+
+
+
+
+/*=============== puntos de corte ===============*/
+/* celulares */
+@media screen and (max-width: 480px) {
+  .card__container {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 1.5vw;
+  }
+  .card__img {
+    width: 80vw;
+    border-radius: 1.5vw;
+  }
+  .card__data{
+    width: 80vw;
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 480px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5vw;
+  }
+  .card__img {
+    width: 40vw;
+    border-radius: 1.5vw;
+  }
+  .card__data{
+    width: 30vw;
+  }
+}
+
+/* computadora */
+@media screen and (min-width: 960px) {
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.5vw;
+    .card__img {
+      width: 30vw;
+      border-radius: 1.5vw;
+    }
+    .card__data{
+      width: 20vw;
+    }
+  }
+}

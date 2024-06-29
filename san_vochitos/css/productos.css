@@ -1,0 +1,104 @@
+:root {
+    --square_width: 22.5vw;
+    --columns_num: 4;
+    --gap_size: 1vw;
+    --font_productos: 6vw;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.contenedor {
+    min-height: 200px;
+    margin-bottom: 7vw;
+    display: grid;
+    grid-template-columns: repeat(var(--columns_num), var(--square_width));
+    gap: var(--gap_size);
+    place-content: center;
+}
+
+.item {
+    font-family: "Source Sans 3", sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS' ;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vw;
+}
+
+.item h5 {
+    font-size: calc(var(--font_productos)*1.15);
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;    
+    align-self: flex-start;    
+}
+
+.item p {
+    font-size: var(--font_productos);
+    margin-top: 0;
+    margin-bottom: 2.5%;
+}
+
+.item img {
+    width: 100%;
+    border: 4px solid #b6e2a1;
+}   
+
+.navProductos {
+    font-size: 1rem;
+    margin-top: 10vw;
+    margin-bottom: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 2.5rem;
+    justify-content:space-around;
+    list-style-type: none;
+    padding: 0;
+    background-color: #F7A4A4;
+}
+
+.navProductos a{
+    color: white;
+    text-decoration: none; /* no underline */
+    display: flex;
+    align-items: center;
+    transition-duration: 0.25s;
+    transition-property: font-size;
+    transition-timing-function: cubic-bezier(.68,-0.55,.27,1.55);   
+}
+
+.navProductos a:hover {
+    font-size: 1.5rem;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    :root {
+        --square_width: 80vw;
+        --columns_num: 1;
+        --gap_size: 3vw;
+
+        --font_productos: 5.1vw;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    :root {
+        --square_width: 45vw;
+        --columns_num: 2;
+        --gap_size: 2vw;
+
+        --font_productos: 2.8vw;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    :root {
+        --square_width: 23vw;
+        --columns_num: 4;
+        --gap_size: 1vw;
+
+        --font_productos: 1.4vw;
+    }
+}
