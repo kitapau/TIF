@@ -1,0 +1,28 @@
+
+.clasificacion label {
+font-size: 50px;
+}
+
+input[type="radio"] {
+display: none;
+}
+
+label {
+color: grey;
+}
+
+.clasificacion {
+direction: rtl;
+unicode-bidi: bidi-override;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+text-align: left;
+}
+
+label:hover,
+label:hover ~ label {
+color: #F7A4A4;
+}
+
+input[type="radio"]:checked ~ label {
+color: #F7A4A4;
+}

@@ -1,0 +1,91 @@
+/*TIPOGRAFÍAS*/
+body {
+    background-color: #ffffff;
+    color:black;
+    font-family: "Source Sans 3", sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS' ;
+    font-weight: 300;
+}
+
+.titulo1{
+    margin-top: 15vw;;
+    margin-bottom: 1vw;;
+    color: #F7A4A4;
+    font-family: "Raleway", sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS' ;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.titulo2{
+    margin-top: 15vw;;
+    margin-bottom: 1vw;;
+    color: white;
+    font-family: "Raleway", sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS' ;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.subtitulo1{
+    margin-top: 1vw;;
+    margin-bottom: 5vw;;
+    color: black;
+    font-family: "Lato", sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS' ;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 2em;
+}
+
+.subtitulo2{
+    margin-top: 1vw;;
+    margin-bottom: 0;;
+    color: #FFFBC1;
+    font-family: "Lato", sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS' ;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 2em;
+}
+
+.textoError{
+    margin-top: 0;;
+    margin-bottom: 0;;
+    color: red;
+    font-family: "Lato", sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS' ;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.5em;
+}
+
+.parrafoNegrita {
+    margin-top: 2vw;;
+    margin-bottom: 5vw;;
+    font-style: bold;
+}
+
+.parrafo1 {
+    margin-top: 2vw;;
+    margin-bottom: 2vw;;
+    color:black;
+    font-family: "Source Sans 3", sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS' ;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+.negrita {
+    font-weight: 500;
+}
+
+.parrafo2 {
+    margin-top: 2vw;;
+    margin-bottom: 2vw;;
+    color:white;
+    font-family: "Source Sans 3", sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS' ;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+/*MAIN*/
+.cuerpo{
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+
