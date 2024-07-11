@@ -1,0 +1,83 @@
+{% extends "core/base.html" %}
+
+{% block title%} Productos {% endblock %}
+
+{%  load static %}
+
+{% block content %}
+{% comment %}{{projects}}{% endcomment %}
+ <!-- navegación productos -->
+ <h1 class="titulo1 cuerpo">PRODUCTOS</h1>
+ <nav class="navProductos">
+     
+    {% comment %} <a href="{% url '#sandwiches' %}">Sándwiches</a>  
+    <a href="{% url '#bebidas' %}">Bebidas</a>
+    <a href="{% url '#acompañamientos' %}">Acompañamientos</a> {% endcomment %}
+    
+
+ </nav>
+ <h2 class="subtitulo1 cuerpo" id="sandwiches"><!--LOS SÁNDWICHES--></h2>
+{% for project in projects %} 
+ <!-- los sanguches -->
+ 
+ <div class="contenedor cuerpo"> 
+     <div class="item item-1"></div>
+       <div class="item item-1">
+         <h5>{{project.nombre}}</h5>
+         <p>{{project.descripcion}}</p>  
+         <img src="{{project.image.url}}" alt="El clásico.">
+            <!-- <p class="" -->
+     </div>
+     <!-- <div class="item item-2">
+        <img src="{% static 'core/img/productos/sanguche2.png' %}" alt="El de ensalada de papa.">
+        <h5>EL DE ENSALADA DE PAPA</h5>
+        <p>Esto es lo que buscabas y no lo sabías, el inigualable y especial sandwich de ensalada de papa.</p>
+    </div>
+    <div class="item item-3">
+        <img src="{% static 'core/img/productos/sanguche3.png' %}" alt="El derretido.">
+        <h5>EL DERRETIDO</h5>
+        <p>Especial para cuando quieras algo potente sin que te importe nada. Mezcla de quesos 100% vegetales.</p>
+    </div>
+    <div class="item item-4">
+        <img src="{% static 'core/img/productos/sanguche4.png' %}" alt="Especial de la casa.">
+        <h5>ESPECIAL DE LA CASA</h5>
+        <p>¿Querés explorar nuevos horizontes? Te presentamos esta bomba de sabor rellena de hongos, tomate, lechuga y salsa especial de la casa.</p>
+    </div> --> 
+</div>
+
+<!-- las bebidas -->
+<h2 class="subtitulo1 cuerpo" id="bebidas"><!--BEBIDAS--></h2>
+<div class="contenedor cuerpo"> 
+    <!-- <div class="item item-1">1</div> -->
+    
+   <!-- <div class="item item-2">
+        <img src="{% static 'core/img/productos/matcha-late.png' %}" alt="Matcha Latte.">
+        <h5>MATCHA LATTE</h5>
+        <p>El exótico sabor ligeramente amargo del matcha, traído desde el Asia Oriental,  junto con dulce leche de coco y cubitos de hielo picado.</p>
+    </div>
+    <div class="item item-3">
+        <img src="{% static 'core/img/productos/batido-frutilla.png' %}" alt="Batido de frutilla.">
+        <h5>BATIDO DE FRUTILLA</h5>
+        <p>El favorito de siempre, la muy muy dulce mezcla de crema vegetal con el toque ácido del licuado de frutilla. Además, luce bien coquette ¿no?</p>
+    </div>
+    <div class="item item-4">
+        <img src="{% static 'core/img/productos/batido-melon.png' %}" alt="Batido de melón">
+        <h5>BATIDO DE MELÓN</h5>
+        <p>Una propuesta novedosa y extravagante. El sabor suave y dulce del melón en un más que refrescante batido.</p>
+    </div> --> 
+</div>
+
+<!-- acompañamientos -->
+<h2 class="subtitulo1 cuerpo" id="acompañamientos"><!--ACOMPAÑAMIENTOS--></h2>
+<div class="contenedor acompa cuerpo"> 
+    <!-- <div class="item item-1">1</div> -->
+    
+   <!-- <div class="item item-2">
+        <img src="{% static 'core/img/productos/nuggets.png' %}" alt="Nuggets.">
+        <h5>NUGGETS</h5>
+        <p>Proteína de soja simil pollo, cubierto de una crujiente capa de rebosado acompañado de salsa a elección. </p>
+    </div> -->
+</div>
+ {% endfor %}
+
+ {% endblock %}

@@ -1,0 +1,51 @@
+{% extends "core/base.html" %}
+
+{% block title%} Locales {% endblock %}
+
+{%  load static %}
+
+{% block content %}
+
+<div id="contenedorPagina">
+
+    <div class="el_body">
+        <div class="cuerpo">
+            <h1 class="titulo1">LOCALES</h1>
+            <H2 class="subtitulo1">¡Te esperamos en cualquiera de nuestras sucursales!</H2>    
+        </div>
+
+        <div class="contenedor" >
+            <div class="sucursal">
+                <h2 class="tituloMapa">Villa del Parque</h2>
+                <iframe class="item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2133986963836!2d-58.499589124272724!3d-34.59876495723658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb63a849e868b%3A0x9df733e726d148c0!2sCuenca%203385%2C%20C1417%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1715573101222!5m2!1ses-419!2sar" 
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h2 class="parrafoMapa">Cuenca 3385 - CABA</h2>
+            </div>
+            
+            <div class="sucursal">
+                <h2 class="tituloMapa">Núñez</h2>
+                <iframe class="item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76519.2983514675!2d-58.45376443761555!3d-34.567818805115884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb42f9ecdb189%3A0x975a714f37e3117f!2sAv.%20del%20Libertador%206820%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1715573423505!5m2!1ses-419!2sar" 
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h2 class="parrafoMapa">Av. del Libertador 6820 - CABA</h2>  
+            </div>
+            
+
+        </div>
+        <div class="contenedor">
+            <div class="sucursal">
+               <h2 class="tituloMapa">La Paternal</h2>
+                <iframe class="item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124888.6764008803!2d-58.48898866770924!3d-34.65909044282966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9ffca98de21%3A0xae701d955bbcbd71!2sComuna%2011%2C%20Av.%20S.%20Mart%C3%ADn%202880%2C%20C1416CSQ%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1715573534069!5m2!1ses-419!2sar" 
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h2 class="parrafoMapa">Av. S. Martín 2880 - CABA</h2>  
+            </div>
+            
+            <div class="sucursal">
+                <h2 class="tituloMapa">Palermo</h2>
+                <iframe class="item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.432502800898!2d-58.43070132427292!3d-34.593223356944044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca782da1fe5d%3A0xae9bb7509346558f!2sAv.%20Ra%C3%BAl%20Scalabrini%20Ortiz%201289%2C%20C1414DNM%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1715573916131!5m2!1ses-419!2sar"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h2 class="parrafoMapa">Av. Raúl Scalabrini Ortiz 1289 - CABA</h2>   
+            </div>
+        </div>    
+    </div>
+    
+{% endblock %}

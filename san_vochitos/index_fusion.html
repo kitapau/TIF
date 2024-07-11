@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
+
+  <!-- TIPOGRAFÍAS -->
+  <!-- Link google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- tipografía SourseSans3 para los parrafos -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <!-- tipografía Raleway para los títulos -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <!-- tipografía Lato para los subtítulos -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- tipografía Yesteryear para los Sabores -->
+  <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
+
+
+  <!-- ÍCONOS -->
+  <!-- <ícono hamburguesa> -->
+  <link rel='stylesheet' href="https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css">
+  <!-- <ícono redes> -->
+  <link rel='stylesheet' href="https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+
+  
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="img/icon/favicon.ico" >
+  <link rel="icon" href="img/icon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="img/icon/android-icon-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-icon-180x180.png">
+  <meta name="msapplication-TileImage" content="icon/ms-icon-270x270.png">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/inicio.css">
+  <link rel="stylesheet" href="css/configuracion-texto.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  
+
+  <title>{% block title%}  San Vochitos {% endblock %}</title>
+
+</head>
+
+<body>
+  <div id="contenedorPagina">
+    <!-- HAMBURGUESA -->
+    <header id="sv_header_principal">
+      <nav>
+          <a id="sv_inicio_link" href="{% url 'index' %}">
+              <img src="img/logos/logo-miniblanco.png" alt="imagenLogo">
+          </a>
+
+          <input type="checkbox" id="sv_sidebar_active">
+          <div id="sv_hamburg">
+              <label for="sv_sidebar_active" id="sv_open_sidebar_button">
+                  <svg xmlns="http://www.w3.org/2000/svg" 
+                      width="28" 
+                      height="28" 
+                      fill="currentColor" 
+                      class="bi bi-list" 
+                      viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+              </label>
+          </div>
+
+          <div id="sv_link_container">
+              <a href="{% url 'productos' %}">Productos</a>
+              <a href="{% url 'locales' %}">Locales</a>
+              <a href="{% url 'contacto' %}">Contacto</a>
+          </div>
+      </nav>
+    </header>
+
+    {% block content %}
+
+   
+
+    <!-- CARROUSEL -->    
+    <div id="calesita">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src="img/combos/combo5.png" class="combo" alt="2x1 en papas fritas">
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/combos/combo4.png" class="combo" alt="25% de descuento en bebidas">
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/combos/combo.png" class="combo" alt="combo 1">
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/combos/combo2.png" class="combo" alt="combo 2">
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/combos/combo3.png" class="combo" alt="combo 3">
+          </div> 
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>   
+    </div>  
+
+    <br>
+
+    <!-- NUESTRA AMIGA  -->
+    <article class="nuestraAmiga">
+      <h1 class="titulo1"> NUESTRA (A)MIGA </h1>
+      <H2 class="subtitulo1">EL PAN, EL FUNDAMENTO DEL SANDWICH</H2>
+      <p class="parrafo1">La base de todo buen sandwich se encuentra en el pan, uno que combine perfectamente con cada uno de los ingredientes del el relleno <span class="negrita"> para darle vida a la experiencia única de comer un sandwich en San Vochitos. </span> </p>
+      <!-- <img class="saboresIncreibles" src="img/sabores-increibles.png" alt="saboresIncreibles"> -->
+      <p class="sabores">¡Sabores <br> Inolvidables!</p>
+    </article>
+          
+    <!-- ¿ACOMPAÑAMOS CON ALGO? -->
+    <section class="novedadesImagenes">
+      <div class="textoAcompanamiento">
+        <h1 class="titulo2">¿Lo querés con papas?</h1>
+        <h2 class="subtitulo2">Han llegado nuevos acompañamientos para que disfrutes aún más tus sandwiches!!</h2>
+      </div>
+
+      <!-- TARJETAS --> 
+      <div class="container">
+        <div class="card__container">
+
+          <article class="card__article">
+            <img src="img/productos/papas-fritas.png" alt="image" class="card__img">
+
+            <div class="card__data">
+                <h2 class="card__title">Papas Fritas</h2>
+                <span class="card__description">Las papitas crujientes son el complemento infaltable de toda buena comida, y ¡acá tenemos las mejores!</span>
+              <a href="{% url 'productos' %}#acompañamientos" class="card__button">Más Detalles</a>
+            </div>
+          </article>
+
+          <article class="card__article">
+            <img src="img/productos/nuggets.png" alt="image" class="card__img">
+
+            <div class="card__data">
+              <h2 class="card__title">Nuggets</h2>
+                <span class="card__description">¡NUGGETS! ¡NUGGETS! 
+                  ¿Alguien dijo nuggets? ¡Sí! ya están las nuevas nuggets de proteína de soja.</span>
+                <a href="{% url 'productos' %}#acompañamientos" class="card__button">Más Dettales</a>
+            </div>
+          </article>
+
+          <article class="card__article">
+            <img src="img/productos/batido-frutilla.png" alt="image" class="card__img">
+
+            <div class="card__data">
+                <h2 class="card__title">Batido Frutilla</h2>
+                <span class="card__description">Se te antoja algo dulce? 
+                  ¡Tenemos la solución! La mezcla perfecta entre frutilla y crema batida.</span>
+                <a href="{% url 'productos' %}#bebidas" class="card__button">Más Detalles</a>
+            </div >
+          </article>
+        </div>
+      </div> 
+    </section>
+
+    <!-- UNA PASIÓN -->
+    <article class="unaPasion">
+      <h1 class="titulo1">UNA PASIÓN</h1>
+      <h2 class="subtitulo1">EL AMOR POR EL SANDWICH</h2>
+      <p class="parrafo1">San Vochitos nació como resultado de la búsqueda de llegar al <span class="negrita">sandwich perfecto</span> en un mundo imperfecto. <br> La contaminación ambiental y la explotación animal son una realidad y por eso nuestros sandwiches son <span class="negrita">100% plant based</span>,    esta limitación de ingredientes más que coartar los sabores nos dio el empujón para <span class="negrita">los mejores sandwiches originales. </span>
+      <br> Te invitamos a adentrarte en <span class="negrita">esta nueva experiencia de sabores.</span></p>
+    </article> 
+ 
+    {% endblock %}
+
+    <!-- PIE DE PAGINA -->
+    <footer class="piePagina">
+
+      <a href="{% url 'index' %}"><img class="imagenlogofooter" src="img/logos/logo-verde.png" alt="Logo San Vochitos"></a>
+      
+      <div class="seccion-derecha">
+      <p class="redesSociales">
+          <a href="https://www.instagram.com/"><i class="redes fi fi-brands-instagram"></i></a>
+          <a href="https://www.facebook.com/"><i class="redes fi fi-brands-facebook"></i></a>
+          <a href="https://twitter.com/"><i class="redes fi fi-brands-twitter-alt-circle"></i></a>
+      </p>
+      </div>
+
+      <div class="seccion-izquierda">  
+      <ul>
+          <li class="liPaginasFooter"> <a class="linkFooter" href="{% url 'index' %}">Inicio</a> </li>
+          <li class="liPaginasFooter"> <a class="linkFooter" href="{% url 'productos' %}">Productos</a> </li>
+          <li class="liPaginasFooter"> <a class="linkFooter" href="{% url 'locales' %}">Locales</a> </li>
+          <li class="liPaginasFooter"> <a class="linkFooter" href="{% url 'contacto' %}">Contacto</a> </li>
+      </ul>
+      </div>
+
+
+      <p class="derechos">Todos los derechos reservados © 2023</p>
+
+    </footer> 
+
+  </div>
+
+</body>
+</html>
