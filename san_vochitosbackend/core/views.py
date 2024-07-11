@@ -6,8 +6,6 @@ from django.http import HttpResponse
 def index (request):    
     return render(request, "core/index.html") 
 
-def productos (request):    
-    return render(request, "core/productos.html")
 
 def locales (request):    
     return render(request, "core/locales.html")
